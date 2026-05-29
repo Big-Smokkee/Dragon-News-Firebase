@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user } = use(AuthContext);
   return (
     <div className="flex justify-between items-center">
-      <div className="">{user && user.pass}</div>
+      <div className="">{user && user.email}</div>
       <div className="nav flex gap-5 text-accent">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
