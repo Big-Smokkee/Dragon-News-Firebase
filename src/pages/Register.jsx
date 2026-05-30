@@ -30,10 +30,10 @@ const Register = () => {
         else {
             setPasswordError("");
         }
-        console.log({ name, photoURL, email, password });
+        // console.log({ name, photoURL, email, password });
         createUser(email, password)
             .then((res) => {
-                console.log(res.user);
+                // console.log(res.user);
                 const user = res.user;
                 updateUserProfile({ displayName: name, photoURL })
                     .then(() => {

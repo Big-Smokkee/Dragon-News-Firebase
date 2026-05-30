@@ -5,7 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 const Login = () => {
     const { setUser, signInUser } = use(AuthContext);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     const navigate = useNavigate();
     const [error, setError] = useState("");
 
@@ -14,12 +14,12 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log({ email, password });
+        // console.log({ email, password });
         signInUser(email, password)
             .then(res => {
                 alert("Login Done");
                 setUser(res.user);
-                console.log(res.user);
+                // console.log(res.user);
                 navigate(`${location.state ? location.state : "/category/1"}`);
             })
             .catch(err => {
